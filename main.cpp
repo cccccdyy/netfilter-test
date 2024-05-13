@@ -22,7 +22,7 @@ void usage() {
 void dump(unsigned char* buf, int size) {
 
 	char buf_copy[size+1];
-	memset(buf_copy, 0, size); // null
+	memset(buf_copy, 0, sizeof(buf_copy)); // null
 	memcpy(buf_copy, buf, size); 
 
 	uint32_t ipv4hdr_len = ((PIpHdr)buf_copy)->ip_len * 4; // ipv4 header length
