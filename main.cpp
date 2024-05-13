@@ -74,6 +74,7 @@ void dump(unsigned char* buf, int size) {
 	if (host) {
 		host = strtok(host + 6, "\r\n");
 		if (!strcmp(host, hostname)) dropflag = 1;
+		else dropflag = 0;
 	}
 	else dropflag = 0;
 }
